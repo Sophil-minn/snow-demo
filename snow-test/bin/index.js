@@ -1,6 +1,17 @@
 #!/usr/bin/env node
 
 const lib = require('snow-test-lib');
+const beibeilib = require('beibei-test-lib');
+const { exit } = require('process');
+// const importLocal = require('import-local');
+
+// if (importLocal(__filename)) {
+//   console.log('importLocal:222222');
+// } else {
+//   console.log('11111111'); 
+// }
+
+console.log('beibeilib: ', beibeilib);
 
 const argv = require('process').argv;
 
@@ -14,6 +25,7 @@ if (lib[command]) {
   lib[command]()
 } else {
   console.log('请输入命令');
+  exit(0)
 }
 
 
