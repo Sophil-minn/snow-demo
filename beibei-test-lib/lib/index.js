@@ -1,8 +1,11 @@
 module.exports = {
-  sum(a, b) {
-    return a + b;
+  tommoary() {
+
   },
-  init({ option, param }) {
-    console.log('执行init流程 10-30', option, param);
+  yestodayis() {
+
+  },
+  todayis() {
+    console.log('todayis: ', 1101);
   }
 }
