@@ -18,7 +18,7 @@ const context = {
 }
 
 yargs(arg)
-  .usage('Usage: snow--test  [command] <options>')
+  .usage('Usage: $0  [command] <options>')
   .demandCommand(1, 'A command is required. Pass --help to see all available commands and options')
   .alias("h", "help")
   .alias("m", "version")
@@ -88,4 +88,4 @@ yargs(arg)
 
 // 完成整个yargs初始化信息
 
-// https://www.npmjs.com/package/yargs
+// https://www.npmjs.com/package/yargsyarn
