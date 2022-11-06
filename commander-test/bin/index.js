@@ -57,6 +57,7 @@ clone
   
   program.addCommand(service);
 
+  // 对所有command命令进行监听
   program
   .arguments('<cmd> [options]')
   .description('test command', {
