@@ -1,10 +1,33 @@
 const path = require('path');
-module.export = {
+module.exports = {
   // entry: path.join(__dirname, 'core.js'),
-  entry:'bin/core.js',
+  entry:'./bin/core.js',
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'core.js',
   },
-  mode: 'development'
+  mode: 'development',
+  target: 'node',
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|dist)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            "plugins": [
+              ["@babel/plugin-transform-runtime", {
+              "corejs": 3,
+              "regenerator": true,
+              "useEsModules": true,
+              "helper": true
+            }]
+            ]
+          }
+        }
+      }
+    ]
+  }
 }

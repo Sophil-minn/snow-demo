@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-require('../dist/main.js');
+require('./core.js');
 // import utils from './utils';
 
 // utils();
